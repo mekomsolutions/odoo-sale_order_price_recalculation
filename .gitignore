@@ -1,0 +1,13 @@
+env/
+.idea
+.vscode/
+.project
+.settings/
+__pycache__/
+*.py[cod]
+
+# Gradle files
+.gradle/
+
+# Gradle build files
+build/

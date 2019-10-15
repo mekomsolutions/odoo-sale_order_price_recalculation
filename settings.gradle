@@ -1,0 +1,3 @@
+rootProject.name = 'sale_order_price_recalculation'
+
+include 'sale_order_price_recalculation'
