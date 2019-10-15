@@ -97,6 +97,16 @@ task installBaseAddons(type: Exec) {
 	'--abort-on-container-exit'
 }
 
+task runOdoo(type: Exec) {
+	dependsOn installBaseAddons
+	workingDir testResourcesDir
+	commandLine 'docker-compose',
+	'-f',
+	'dockerfiles/run.yml',
+	'up',
+	'--abort-on-container-exit'
+}
+
 task copySources(type: Copy) {
 	from "./" + project.name + "/"
 	exclude "tests"
@@ -179,6 +189,10 @@ task cleanDocker {
 clean {
 	delete buildDir.getAbsolutePath()
 	delete generatedPom.getAbsolutePath()
+}
+
+task run(type: Exec) {
+	dependsOn runOdoo
 }
 
 install {

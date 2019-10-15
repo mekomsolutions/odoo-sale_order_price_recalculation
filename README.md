@@ -1,8 +1,5 @@
-<img src="readme/crudem-hsc-logo.png" alt="hsc-logo" width="400"/>
 
-------
-
-# Odoo Sales Order Price recalculation Add-on
+# Odoo Sales Order Price Recalculation Add-on
 
 
 ### README
@@ -27,7 +24,7 @@ Install the archive locally:
 
 ### Deploy on repository
 
-2 was to set the credentials:
+2 ways to set the credentials:
 - export username/password as environment variables:
 ```
 # Prompt for Nexus username and password
@@ -53,16 +50,8 @@ By default the repo URL will be Mekom Nexus repository, but you can provide your
 ```
 
 ### Additional info
-- The `test` Gradle task will in fact run 2 substasks: **runUnitTests** and **processCSVs**.
-You can run those 2 tasks independently if you which.
-```
-./gradlew clean runUnitTests
-```
-```
-./gradlew clean processCSVs
-```
 
-- If you are willing to leave the Odoo server running after running the tests, use:
+If you are willing to leave the Odoo server running after running the tests, use:
 ```
 ./gradlew clean test run
 ```

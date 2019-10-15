@@ -2,7 +2,7 @@ version: '3'
 services:
   odoo:
     image: odoo:10.0
-    command: -d odoo --stop-after-init --test-enable -u sale_order_price_recalculation
+    command: -d odoo
     volumes:
       - ${sources}:/mnt/extra-addons/sale_order_price_recalculation
       - ${testResources}/config:/etc/odoo
