@@ -12,7 +12,6 @@ from odoo import api, models
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    @api.multi
     def recalculate_prices(self):
         for line in self.mapped('order_line'):
             dict = line._convert_to_write(line.read()[0])
@@ -24,7 +23,6 @@ class SaleOrder(models.Model):
             line.price_unit = line2.price_unit
         return True
 
-    @api.multi
     def recalculate_names(self):
         for line in self.mapped('order_line').filtered('product_id'):
             # we make this to isolate changed values:
