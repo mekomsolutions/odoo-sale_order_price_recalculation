@@ -4,5 +4,5 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.mekomsolutions.odoo</groupId>
   <artifactId>sale_order_price_recalculation</artifactId>
-  <version>10.0.1.0.0</version>
+  <version>14.0.1.0.0</version>
 </project>
